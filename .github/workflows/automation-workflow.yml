@@ -11,20 +11,6 @@ on:
 
 
 jobs:
-  linux:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [12.x, 14.x, 15.x]
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-      - name: Install Dependencies
-        run: npm install
-      - name: runtest
-        run: npm run test
   e2e-windows:
     runs-on: windows-latest
     steps:
