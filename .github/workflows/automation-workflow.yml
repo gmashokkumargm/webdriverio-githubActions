@@ -18,10 +18,9 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          browser: firefox
           node-version: 14.x
-      - name: Install Dependencies
-        run: npm install
+      # - name: Install Dependencies
+      #   run: npm install
       - name: run windows test
         run: npm run test
 
@@ -31,9 +30,8 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          browser: firefox
           node-version: 14.x
-      - name: Install Dependencies
-        run: npm install
+      # - name: Install Dependencies
+      #   run: npm install
       - name: run macos test
         run: npm run test
