@@ -5,7 +5,7 @@ name: Automation-test
 
 on:
   schedule:
-    - cron: '20 2 * * *'
+    - cron: '35 2 * * *'
   push:
     branches: [ master ]
   pull_request:
