@@ -19,8 +19,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14.x
-      # - name: Install Dependencies
-      #   run: npm install
+      - name: Install Dependencies
+        run: npm install
       - name: run windows test
         run: npm run test
 
@@ -31,7 +31,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14.x
-      # - name: Install Dependencies
-      #   run: npm install
+      - name: Install Dependencies
+        run: npm install
       - name: run macos test
         run: npm run test
