@@ -5,15 +5,13 @@ name: Automation-test
 
 on:
   schedule:
-    - cron: '35 2 * * *'
+    - cron: '0 0 * * *'
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
-
+    branches: [master]
 
 jobs:
-
   e2e-windows:
     runs-on: windows-latest
     steps:
@@ -25,7 +23,7 @@ jobs:
         run: npm install
       - name: run windows test
         run: npm run test
-        
+
   e2e-mac:
     runs-on: macos-latest
     steps:
