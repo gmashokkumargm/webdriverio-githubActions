@@ -11,7 +11,7 @@ exports.config = {
 	// WebdriverIO allows it to run your tests in arbitrary locations (e.g. locally or
 	// on a remote machine).
 	runner: 'local',
-	port: 9515,
+	//port: 4444,
 	//
 	// ==================
 	// Specify Test Files
@@ -60,6 +60,7 @@ exports.config = {
 			//
 			browserName: 'chrome',
 			acceptInsecureCerts: true,
+			port: 9515,
 			// If outputDir is provided WebdriverIO can capture driver session logs
 			// it is possible to configure which logTypes to include/exclude.
 			// excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
