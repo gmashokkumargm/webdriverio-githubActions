@@ -1,5 +1,5 @@
 const drivers = {
-	chrome: { version: '89.0.4389.23' }, // https://chromedriver.chromium.org/
+	chrome: { version: '89.0.0.0' }, // https://chromedriver.chromium.org/
 };
 
 exports.config = {
@@ -114,7 +114,7 @@ exports.config = {
 	// your test setup with almost no effort. Unlike plugins, they don't add new
 	// commands. Instead, they hook themselves up into the test process.
 	//services: [['selenium-standalone', { drivers }]],
-	services: ['chromedriver'],
+	services: [['selenium-standalone', { drivers }]],
 
 	// Framework you want to run your specs with.
 	// The following are supported: Mocha, Jasmine, and Cucumber
