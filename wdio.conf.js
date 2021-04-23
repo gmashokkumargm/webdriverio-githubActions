@@ -1,5 +1,5 @@
 const drivers = {
-	chrome: { version: '90.0.0.0' }, // https://chromedriver.chromium.org/
+	chrome: { version: '89.0.0.0' }, // https://chromedriver.chromium.org/
 };
 
 exports.config = {
