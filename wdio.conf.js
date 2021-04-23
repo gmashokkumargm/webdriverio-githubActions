@@ -12,7 +12,7 @@ exports.config = {
 	// on a remote machine).
 	runner: 'local',
 	hostName: 'localhost',
-	port: 4444,
+	port: 9515,
 	//
 	// ==================
 	// Specify Test Files
@@ -58,7 +58,6 @@ exports.config = {
 			//
 			browserName: 'chrome',
 			acceptInsecureCerts: true,
-			//port: 9515,
 			// If outputDir is provided WebdriverIO can capture driver session logs
 			// it is possible to configure which logTypes to include/exclude.
 			// excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
@@ -72,7 +71,7 @@ exports.config = {
 	// Define all options that are relevant for the WebdriverIO instance here
 	//
 	// Level of logging verbosity: trace | debug | info | warn | error | silent
-	logLevel: 'info',
+	logLevel: 'error',
 	//
 	// Set specific log levels per logger
 	// loggers:
@@ -217,14 +216,8 @@ exports.config = {
 	 * Hook that gets executed before the suite starts
 	 * @param {Object} suite suite details
 	 */
-	beforeSuite: function (suite) {
-		// const chai = require('chai')
-		// const webdriverio = require('chai-webdriverio').default
-		// chai.use(webdriverio(browser))
-		// global.assert = chai.assert
-		// global.should = chai.should
-		// global.expect = chai.expect
-	},
+	// beforeSuite: function (suite) {
+	// },
 	/**
 	 * Function to be executed before a test (in Mocha/Jasmine) starts.
 	 */
