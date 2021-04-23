@@ -1,5 +1,5 @@
 const drivers = {
-	chrome: { version: '89.0.0.0' }, // https://chromedriver.chromium.org/
+	chrome: { version: '90.0.0.0' }, // https://chromedriver.chromium.org/
 };
 
 exports.config = {
@@ -11,7 +11,8 @@ exports.config = {
 	// WebdriverIO allows it to run your tests in arbitrary locations (e.g. locally or
 	// on a remote machine).
 	runner: 'local',
-	//port: 4444,
+	hostName: 'localhost',
+	port: 4444,
 	//
 	// ==================
 	// Specify Test Files
@@ -21,10 +22,7 @@ exports.config = {
 	// NPM script (see https://docs.npmjs.com/cli/run-script) then the current working
 	// directory is where your package.json resides, so `wdio` will be called from there.
 	//
-	specs: [
-		'./test/specs/**/*.spec.js',
-		//'./test/specs/**/AddToCartSpec.js'
-	],
+	specs: ['./test/specs/**/*.spec.js'],
 	// Patterns to exclude.
 	exclude: [
 		// 'path/to/excluded/files'
@@ -60,7 +58,7 @@ exports.config = {
 			//
 			browserName: 'chrome',
 			acceptInsecureCerts: true,
-			port: 9515,
+			//port: 9515,
 			// If outputDir is provided WebdriverIO can capture driver session logs
 			// it is possible to configure which logTypes to include/exclude.
 			// excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
@@ -74,7 +72,7 @@ exports.config = {
 	// Define all options that are relevant for the WebdriverIO instance here
 	//
 	// Level of logging verbosity: trace | debug | info | warn | error | silent
-	logLevel: 'error',
+	logLevel: 'info',
 	//
 	// Set specific log levels per logger
 	// loggers:
@@ -115,7 +113,7 @@ exports.config = {
 	// your test setup with almost no effort. Unlike plugins, they don't add new
 	// commands. Instead, they hook themselves up into the test process.
 	//services: [['selenium-standalone', { drivers }]],
-	services: ['chromedriver'],
+	services: [['selenium-standalone', { drivers }]],
 
 	// Framework you want to run your specs with.
 	// The following are supported: Mocha, Jasmine, and Cucumber
