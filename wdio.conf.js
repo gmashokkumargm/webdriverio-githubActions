@@ -12,7 +12,7 @@ exports.config = {
 	// on a remote machine).
 	runner: 'local',
 	hostName: 'localhost',
-	port: 9515,
+	//port: 9515,
 	//
 	// ==================
 	// Specify Test Files
